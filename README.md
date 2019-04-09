@@ -15,15 +15,16 @@ stream.Close(); // Close the streamer when finished
 ```
 
 ## Theory of Operation
-InitialState.NET is a very simple to use library for connecting to an Initial State Data Bucket and streaming event data to.  Usage consists of the following steps.
+InitialState<nolink/>.NET is a very simple to use library for connecting to an Initial State Data Bucket and streaming event data to.  Usage consists of the following steps.
 
 * Create an ISStreamer object.
 * Connect the ISStreamer to an existing data bucket or create a new data bucket.
 * Add event data to the event data collection.
-* Push the data to Initial State by calling the StreamEvents() method.  The event data is cleared from the event data collection upon successful streaming.
+* Push the data to Initial State by calling one of the Stream methods.  The event data is cleared from the event data collection upon successful streaming.
 * Continue adding event data and streaming or close the stream.
 
-## InitialState.NET Objects
+
+## InitialState<nolink/>.NET Objects
 
 ### ISStream
 The ISStreamer object encapsulates an Initial State event data stream and is used to make a connection to an event data bucket and stream event data to it.
@@ -44,7 +45,7 @@ This is not an officially supported Tektronix product. It is maintained by a sma
 
 ## License
 
-Put license check badge here
+[Put license check badge here]
 
 
 ## Contributor License Agreement
