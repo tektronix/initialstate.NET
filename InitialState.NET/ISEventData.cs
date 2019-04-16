@@ -22,7 +22,7 @@ using System.Threading.Tasks;
 namespace InitialState.Streaming
 {
     /// <summary>
-    /// Represents an Initial State Event Data point which can be added to a <see cref="ISEventDataCollection"/> to be sent to an Initial State Event Data Stream using a <see cref="ISStreamer"/>.
+    /// Represents an Initial State Event Data point which can be added to a <see cref="ISEventDataCollection"/> to be sent to an Initial State Event Data Stream using an <see cref="ISStreamer"/>.
     /// </summary>
     public class ISEventData
     {

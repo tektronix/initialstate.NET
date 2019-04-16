@@ -51,6 +51,7 @@ namespace InitialState.Streaming
         //---------------
         private HttpClient _httpClient = null;
         private StringBuilder _jsonStrBuilder = null;
+        private readonly DateTime _epochDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0);
 
         // Properties
         //-----------
@@ -80,9 +81,10 @@ namespace InitialState.Streaming
         /// <summary>
         /// Initializes a new instance of the <see cref="ISStreamer"/> class.
         /// </summary>
+        /// <remarks>Uses the default API base address https://groker.init.st/api/</remarks>
         public ISStreamer() : this("https://groker.init.st/api/") { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="ISStreamer"/> class with a specified api base address.
+        /// Initializes a new instance of the <see cref="ISStreamer"/> class with a specified API base address.
         /// </summary>
         /// <param name="apiBaseAddress">The URL where InitalState API calls will be made.</param>
         public ISStreamer(string apiBaseAddress)
@@ -96,7 +98,7 @@ namespace InitialState.Streaming
         // Public Methods
         //---------------
         /// <summary>
-        /// Connects to an Initial State Event Data bucket for streaming.
+        /// Connects the <see cref="ISStreamer"/> to an Event Data Bucket for streaming.
         /// </summary>
         /// <param name="accessKey">The access key that will be used to access the Initial State API.</param>
         /// <param name="bucketKey">The bucket key that identifies the Initial State Event Data bucket to which event data will be streamed.</param>
@@ -119,7 +121,7 @@ namespace InitialState.Streaming
         }
 
         /// <summary>
-        /// Creates and connects the to a new event data bucket for streaming.
+        /// Creates and connects the <see cref="ISStreamer"/> to a new Event Data Bucket for streaming.
         /// </summary>
         /// <param name="accessKey">The access key that will be used to access the Initial State API.</param>
         /// <param name="bucketKey">The bucket key that identifies the Initial State event data bucket to which data will be streamed.</param>
@@ -243,8 +245,8 @@ namespace InitialState.Streaming
             int.TryParse(response.Headers.GetValues("X-RateLimit-Limit").First(), out sr.RateLimit);
             int.TryParse(response.Headers.GetValues("X-RateLimit-Remaining").First(), out sr.RateLimitRemaining);
             int.TryParse(response.Headers.GetValues("X-RateLimit-Reset").First(), out int epochTimestamp);
-            DateTime epoch = new DateTime(1970, 1, 1, 0, 0, 0, 0);
-            sr.RateLimitReset = epoch.AddSeconds(epochTimestamp).ToLocalTime();
+            
+            sr.RateLimitReset = _epochDateTime.AddSeconds(epochTimestamp).ToLocalTime();
 
             // Data is sent so clear out the buffer
             if (sr.Success)

@@ -23,7 +23,7 @@ using System.Threading.Tasks;
 namespace InitialState.Streaming
 {
     /// <summary>
-    /// Represents a collection of <see cref="ISEventData"/> objects that are ready to be sent to and Initial State Event Stream using an <see cref="ISStreamer"/>.
+    /// Represents a collection of <see cref="ISEventData"/> objects that are ready to be sent to an Initial State Event Stream using an <see cref="ISStreamer"/>.
     /// </summary>
     [System.ComponentModel.ListBindable(false)]
     public class ISEventDataCollection : System.Collections.Generic.IList<ISEventData>
