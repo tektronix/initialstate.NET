@@ -1,6 +1,9 @@
 # Contributing Guide
 
-InitialState.<nolink/>NET is a part-time effort from a small team, so contributions are welcome!
+InitialState<nolink />.NET is a part-time effort from a small team, so contributions are welcome!
+
+## Dependencies
+InitialState<nolink />.NET was built using Visual Studio 2017 and the .NET Framework 4.6.2.  It does not have any dependencies outside of the .NET Framework.
 
 
 ## Contributing/Submitting Changes
