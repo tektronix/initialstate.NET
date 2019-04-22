@@ -25,7 +25,7 @@ InitialState<nolink />.NET was built using Visual Studio 2017 and the .NET Frame
     * Each commit should be as limited in scope as possible.
     * Ensure your commit messages are concise and explain “why” instead of “what”. 
 * Submit a pull request.
-    * Make sure your PR is against the dev branch.
+    * Make sure your PR is against the develop branch.
 
 Your pull request will serve as a code review. All submissions, including those by project members, require review.
 
