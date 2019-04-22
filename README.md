@@ -52,7 +52,7 @@ This is not an officially supported Tektronix product. It is maintained by a sma
 
 ## License
 
-[Put license check badge here]
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ftektronix%2Finitialstate.NET.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Ftektronix%2Finitialstate.NET?ref=badge_shield)
 
 
 ## Contributor License Agreement
