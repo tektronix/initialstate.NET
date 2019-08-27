@@ -1,4 +1,4 @@
-# InitialState<nolink/>.NET
+# InitialState<nolink/>.NET [![Tektronix](https://tektronix.github.io/media/TEK-opensource_badge.svg)](https://github.com/tektronix)
 InitialState<nolink/>.NET is a .NET class library that simplifies streaming event data to Initial State.  http://www.initialstate.com
 
 

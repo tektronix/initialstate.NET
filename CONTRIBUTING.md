@@ -7,7 +7,7 @@ InitialState<nolink />.NET was built using Visual Studio 2017 and the .NET Frame
 
 
 ## Contributing/Submitting Changes
-*	Create a fork from the latest dev branch and name it what you intend to do.
+*	Create a fork from the latest develop branch and name it what you intend to do.
     * Branch names should start with:
         * topic/
         * feature/
