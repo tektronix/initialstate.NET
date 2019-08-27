@@ -238,22 +238,23 @@ namespace InitialState.Streaming
             _jsonStrBuilder.Remove(_jsonStrBuilder.Length - 3, 3); // Remove the last ",\r\n"
             _jsonStrBuilder.Append("\r\n]");
 
-            var response = await sendToApi(_jsonStrBuilder.ToString());
-
-            sr.Success = response.StatusCode == System.Net.HttpStatusCode.NoContent;
-            sr.StatusCode = response.StatusCode;
-            int.TryParse(response.Headers.GetValues("X-RateLimit-Limit").First(), out sr.RateLimit);
-            int.TryParse(response.Headers.GetValues("X-RateLimit-Remaining").First(), out sr.RateLimitRemaining);
-            int.TryParse(response.Headers.GetValues("X-RateLimit-Reset").First(), out int epochTimestamp);
-            
-            sr.RateLimitReset = _epochDateTime.AddSeconds(epochTimestamp).ToLocalTime();
-
-            // Data is sent so clear out the buffer
-            if (sr.Success)
+            using (var response = await sendToApi(_jsonStrBuilder.ToString()))
             {
-                this.EventData.Clear();
-            }
 
+                sr.Success = response.StatusCode == System.Net.HttpStatusCode.NoContent;
+                sr.StatusCode = response.StatusCode;
+                int.TryParse(response.Headers.GetValues("X-RateLimit-Limit").First(), out sr.RateLimit);
+                int.TryParse(response.Headers.GetValues("X-RateLimit-Remaining").First(), out sr.RateLimitRemaining);
+                int.TryParse(response.Headers.GetValues("X-RateLimit-Reset").First(), out int epochTimestamp);
+
+                sr.RateLimitReset = _epochDateTime.AddSeconds(epochTimestamp).ToLocalTime();
+
+                // Data is sent so clear out the buffer
+                if (sr.Success)
+                {
+                    this.EventData.Clear();
+                }
+            }
             return sr;
         }
 
@@ -272,9 +273,11 @@ namespace InitialState.Streaming
         //----------------
         private async Task<HttpResponseMessage> sendToApi(string jsonData)
         {
-            var response = await _httpClient.PostAsync("events",
-                    new StringContent(jsonData, Encoding.UTF8, "application/json"));
-            return response;
+            using (var content = new StringContent(jsonData, Encoding.UTF8, "application/json"))
+            {
+                var response = await _httpClient.PostAsync("events", content);
+                return response;
+            }
         }
         private void closeHttpClient()
         {

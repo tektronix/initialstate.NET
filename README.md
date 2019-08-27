@@ -8,8 +8,8 @@ The following example shows you basic use of InitialState<nolink/>.NET.  This ex
 
 ```csharp
 ISStreamer stream = new ISStreamer(); // Create a new streamer
-stream.ConnectBucket(api_key, bucket_key); // Connect the streamer to an event data bucket
-stream.Eventsdata.Add(new ISEventData(itemKey, itemValue)) // Add event data to be streamed
+stream.ConnectBucket("api_key", "bucket_key"); // Connect the streamer to an event data bucket
+stream.Eventsdata.Add(new ISEventData("itemKey", "itemValue")) // Add event data to be streamed
 stream.Stream(); // Stream the event data to Initial State
 stream.Close(); // Close the streamer when finished
 ```
