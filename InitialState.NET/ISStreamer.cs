@@ -25,11 +25,13 @@ namespace InitialState.Streaming
 {
     public struct StreamResponse
     {
-        public bool Success;
+        private bool success;
         public System.Net.HttpStatusCode StatusCode;
         public int RateLimit;
         public int RateLimitRemaining;
         public DateTime RateLimitReset;
+
+        public bool Success { get => success; internal set => success = value; }
     }
 
     /// <summary>
@@ -226,7 +228,7 @@ namespace InitialState.Streaming
                 return null;
             }
 
-            StreamResponse sr;
+            StreamResponse sr = new StreamResponse();
 
             _jsonStrBuilder.Clear();
             _jsonStrBuilder.Append("[\r\n");
