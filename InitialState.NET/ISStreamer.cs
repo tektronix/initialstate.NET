@@ -142,9 +142,13 @@ namespace InitialState.Streaming
 
             string json;
             if (bucketName != null)
+            {
                 json = $"{{ \"bucketKey\": \"{bucketKey}\",  \"bucketName\": \"{bucketName}\"}}";
+            }
             else
+            {
                 json = $"{{ \"bucketKey\": \"{bucketKey}\"}}";
+            }
 
             // Connect/Create Bucket
             try
