@@ -65,12 +65,12 @@ namespace InitialState.Streaming
         /// <summary>
         /// The access key that will be used to access the Initial State API.
         /// </summary>
-        public string AccessKey { get; private set; } = null;
+        public string AccessKey { get; private set; }
 
         /// <summary>
         /// The bucket key that identifies the Initial State event data bucket to which data will be streamed.
         /// </summary>
-        public string BucketKey { get; private set; } = null;
+        public string BucketKey { get; private set; }
 
         /// <summary>
         /// Holds a collection of <see cref="ISEventData"/> that will be streamed to Initial State when <see cref="Stream"/>() is called.
