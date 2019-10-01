@@ -52,7 +52,7 @@ namespace InitialState.Streaming
         // Private Fields
         //---------------
         private HttpClient _httpClient = null;
-        private StringBuilder _jsonStrBuilder = null;
+        private readonly StringBuilder _jsonStrBuilder;
         private readonly DateTime _epochDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0);
 
         // Properties
