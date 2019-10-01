@@ -180,7 +180,7 @@ namespace InitialState.Streaming
                     }
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 closeHttpClient();
                 throw;
