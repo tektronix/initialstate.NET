@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Tektronix Inc.")]
 [assembly: AssemblyProduct("InitialState.NET")]
-[assembly: AssemblyCopyright("Copyright ©  2019 Tektronix Inc.")]
+[assembly: AssemblyCopyright("Copyright © 2019 Tektronix Inc.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
