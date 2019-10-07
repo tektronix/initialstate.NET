@@ -35,3 +35,6 @@
 .vs/
 bin/
 obj/
+
+# NuGet packages
+*.nupkg
