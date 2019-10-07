@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("InitialState.NET")]
 [assembly: AssemblyDescription("InitialState.NET is a .NET class library that simplifies streaming event data to Initial State.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Tektronix Inc.")]
+[assembly: AssemblyCompany("Tektronix, Inc.")]
 [assembly: AssemblyProduct("InitialState.NET")]
 [assembly: AssemblyCopyright("Copyright © 2019 Tektronix Inc.")]
 [assembly: AssemblyTrademark("")]
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.1")]
-[assembly: AssemblyFileVersion("1.0.0.1")]
+[assembly: AssemblyVersion("1.0.0.3")]
+[assembly: AssemblyFileVersion("1.0.0.3")]
