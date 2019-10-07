@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>David Wyban, $author$</authors>
+    <owners>$author$</owners>
+    <license type="expression">Apache-2.0</license>
+    <projectUrl>https://github.com/tektronix/initialstate.NET</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>Added Framework Aseembly System.Net.Http to the manifest.
+Target Framework for Initialstate.NET changed to 4.5 in order to support all .NET projects targeting .NET Framework 4.5 or later.</releaseNotes>
+    <copyright>Copyright 2019 Tektronix, Inc.</copyright>
+    <tags>streaming-data initialstate tektronix-products</tags>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Net.Http" />
+    </frameworkAssemblies>
+  </metadata>
+</package>
