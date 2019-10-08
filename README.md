@@ -33,6 +33,10 @@ The ISStreamer object encapsulates an Initial State event data stream and is use
 The ISEventData object respresents a single event and its corresponding data.  When you create an ISEventData object you must specify a key and value pair, where the key is the name of the event data and the value is the value of the event data.  Optionally you can also specify a timestamp for the event data and the event data can be configured as to whether or not that timestamp should be used when it is streamed to Initial State.  If the event data is configured to not use the timestamp, then when the event data is streamed to Initial State, the timestamp will not be included and Initial State will automatically timestamp the event data with the time that it is received.
 
 
+## Get InitialState<nolink />.NET using NuGet
+InitialState<nolink />.Net is available for addition to your project through NuGet.  Use the NuGet package manager in Visual Studio to add this library (search InitialState<nolink />.NET) or download the package manually at https://www.nuget.org/packages/InitialState.NET/.  The NuGet package contains a pre-compiled binary designed for use with .NET framework 4.5 or later.
+
+
 ## Contribute
 
 See a typo? Know how to fix an issue? Implement a requested feature?
