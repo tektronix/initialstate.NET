@@ -28,7 +28,7 @@ namespace InitialState.Streaming
     [System.ComponentModel.ListBindable(false)]
     public class ISEventDataCollection : System.Collections.Generic.IList<ISEventData>
     {
-        private List<ISEventData> _events = null;
+        private readonly List<ISEventData> _events = null;
 
 
         // Properties
