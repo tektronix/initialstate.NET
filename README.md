@@ -1,8 +1,28 @@
-# InitialState<nolink/>.NET [![Tektronix](https://tektronix.github.io/media/TEK-opensource_badge.svg)](https://github.com/tektronix) [![CodeFactor](https://www.codefactor.io/repository/github/tektronix/initialstate.net/badge)](https://www.codefactor.io/repository/github/tektronix/initialstate.net) [![Total alerts](https://img.shields.io/lgtm/alerts/g/tektronix/initialstate.NET.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/tektronix/initialstate.NET/alerts/)
+# InitialState<nolink/>.NET
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://theme.tekcloud.com/prod/github/tek-logo-round-dark-mode.png" width="100px">
+  <source media="(prefers-color-scheme: light)" srcset="https://theme.tekcloud.com/prod/github/tek-logo-round-light-mode.png" width="100px">
+  <img alt="Tek Logo" src="https://theme.tekcloud.com/prod/github/tek-logo-round-light-mode.png" width="100px">
+</picture>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://theme.tekcloud.com/prod/github/is-logo-dark-mode.svg" width="250px">
+  <source media="(prefers-color-scheme: light)" srcset="https://theme.tekcloud.com/prod/github/is-logo-light-mode.svg" width="250px">
+  <img alt="IS Logo" src="https://theme.tekcloud.com/prod/github/is-logo-light-mode.svg" width="250px">
+</picture>
+
+![repo linter workflow](https://github.com/tektronix/initialstate.NET/actions/workflows/tek-repo-lint.yml/badge.svg) [![CodeFactor](https://www.codefactor.io/repository/github/tektronix/initialstate.net/badge)](https://www.codefactor.io/repository/github/tektronix/initialstate.net)
+
 InitialState<nolink/>.NET is a .NET class library that simplifies streaming event data to Initial State.  http://www.initialstate.com
 
 
-## Example Usage
+## Install InitialState<nolink />.NET using NuGet
+InitialState<nolink />.Net is available for addition to your project through NuGet.  Use the NuGet package manager in Visual Studio to add this library (search InitialState<nolink />.NET) or download the package manually at https://www.nuget.org/packages/InitialState.NET/.  The NuGet package contains a pre-compiled binary designed for use with .NET framework 4.5 or later.
+
+For information on how to install NuGet packages, search "how to install nuget packages" on the web.  There are many tutorials available online.
+
+
+## Using InitialState.NET
 
 The following example shows you basic use of InitialState<nolink/>.NET.  This example shows you how to create an ISStream object, connect it to a data bucket, add some event data to the stream and then stream it to Initial State.
 
@@ -33,10 +53,6 @@ The ISStreamer object encapsulates an Initial State event data stream and is use
 The ISEventData object respresents a single event and its corresponding data.  When you create an ISEventData object you must specify a key and value pair, where the key is the name of the event data and the value is the value of the event data.  Optionally you can also specify a timestamp for the event data and the event data can be configured as to whether or not that timestamp should be used when it is streamed to Initial State.  If the event data is configured to not use the timestamp, then when the event data is streamed to Initial State, the timestamp will not be included and Initial State will automatically timestamp the event data with the time that it is received.
 
 
-## Get InitialState<nolink />.NET using NuGet
-InitialState<nolink />.Net is available for addition to your project through NuGet.  Use the NuGet package manager in Visual Studio to add this library (search InitialState<nolink />.NET) or download the package manually at https://www.nuget.org/packages/InitialState.NET/.  The NuGet package contains a pre-compiled binary designed for use with .NET framework 4.5 or later.
-
-
 ## Contribute
 
 See a typo? Know how to fix an issue? Implement a requested feature?
@@ -55,6 +71,8 @@ This is not an officially supported Tektronix product. It is maintained by a sma
 
 
 ## License
+
+"The code in this project is licensed under Apache 2.0"
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ftektronix%2Finitialstate.NET.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Ftektronix%2Finitialstate.NET?ref=badge_shield)
 
